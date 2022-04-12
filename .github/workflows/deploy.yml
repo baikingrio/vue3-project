@@ -24,7 +24,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.DEPLOY_KEY }}
           script: |
-            cd /www/blog
+            cd /home/web/vue3-project
             sudo git pull
             npm i
             npm run build
