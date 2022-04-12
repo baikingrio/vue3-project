@@ -3,7 +3,7 @@ name: 自动部署 # 步骤名称
 on:
   push:
     branches:
-      - master # 当 master 分支发生提交时触发
+      - main # 当 main 分支发生提交时触发
     # paths-ignore: # 避免这些文件改变时触发
     #   - README.md
     #   - LICENSE
@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: SSH 命令拉取代码
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@main
         with:
           # 这里配置对应仓库设置的变量，就可以避免服务器配置暴露
           host: ${{ secrets.SSH_HOST }}
