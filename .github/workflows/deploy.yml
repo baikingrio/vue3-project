@@ -26,5 +26,6 @@ jobs:
           script: |
             cd /home/web/vue3-project
             sudo git pull
+            sudo -s
             npm i
             npm run build
