@@ -28,3 +28,4 @@ jobs:
             git pull
             npm i
             npm run build
+            sudo cp -rf /home/ec2-user/web/vue3-project/dist/* /var/web/vue3-project
